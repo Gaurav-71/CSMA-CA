@@ -138,28 +138,57 @@ body main .simulation-page {
   overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.4);
   text-shadow: 1px 0px 1px black;
-  /* .active-stations{
-        border: 1px solid white;
-        border-radius: 2em;
-        height: 4rem;
-        margin-top: 3.5%;
-        padding: 1rem;
-        img {
-          width: 30px;
-        }
-        .transmission{
-          display: flex;
-        }
-      } */
 }
 
 body main .simulation-page .station {
-  height: 18rem;
+  height: 20rem;
+}
+
+@media (max-width: 768px) {
+  body main .simulation-page .station {
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  body main .simulation-page .station {
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  body main .simulation-page .station {
+    margin: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  body main .simulation-page .station {
+    margin: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  body main .simulation-page .station {
+    margin: 0;
+  }
 }
 
 body main .simulation-page .station img {
   padding-top: 1em;
   width: 130px;
+}
+
+@media (max-width: 768px) {
+  body main .simulation-page .station img {
+    width: 90px;
+  }
+}
+
+@media (max-width: 991px) {
+  body main .simulation-page .station img {
+    width: 90px;
+  }
 }
 
 body main .simulation-page .station .holder .select-station {
@@ -180,7 +209,7 @@ body main .simulation-page .send-data {
 
 body main .simulation-page .send-data button {
   background: #778899;
-  padding: .5rem;
+  padding: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   border: none;
@@ -201,16 +230,86 @@ body main .simulation-page .router img {
   width: 110px;
 }
 
+@media (max-width: 768px) {
+  body main .simulation-page .router img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  body main .simulation-page .router img {
+    width: 40px;
+  }
+}
+
 body main .simulation-page .router .router-stats {
   padding-top: 1em;
 }
 
-body main .simulation-page .data-sender p, body main .simulation-page .data-receiver p {
+body main .simulation-page .data-sender p,
+body main .simulation-page .data-receiver p {
   padding-top: 4.5rem;
 }
 
-body main .simulation-page .data-sender img, body main .simulation-page .data-receiver img {
+@media (max-width: 768px) {
+  body main .simulation-page .data-sender p,
+  body main .simulation-page .data-receiver p {
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 991px) {
+  body main .simulation-page .data-sender p,
+  body main .simulation-page .data-receiver p {
+    padding-top: 3rem;
+  }
+}
+
+body main .simulation-page .data-sender img,
+body main .simulation-page .data-receiver img {
   width: 80px;
+}
+
+@media (max-width: 1024px) {
+  body main .simulation-page .data-sender img,
+  body main .simulation-page .data-receiver img {
+    width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  body main .simulation-page .data-sender img,
+  body main .simulation-page .data-receiver img {
+    width: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  body main .simulation-page .data-sender img,
+  body main .simulation-page .data-receiver img {
+    width: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  body main .simulation-page .data-sender,
+  body main .simulation-page .data-receiver {
+    display: none !important;
+  }
+}
+
+@media (max-width: 375px) {
+  body main .simulation-page .data-sender,
+  body main .simulation-page .data-receiver {
+    display: none !important;
+  }
+}
+
+@media (max-width: 414px) {
+  body main .simulation-page .data-sender,
+  body main .simulation-page .data-receiver {
+    display: none !important;
+  }
 }
 
 body main .team-page {

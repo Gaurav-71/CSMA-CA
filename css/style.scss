@@ -5,6 +5,33 @@
   padding: 0;
 }
 
+@mixin ipad {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin ipad-portrait {
+  @media (max-width: 768px) {
+    @content;
+  }
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin iphone {
+  @media (max-width: 320px) {
+    @content;
+  }
+  @media (max-width: 375px) {
+    @content;
+  }
+  @media (max-width: 414px) {
+    @content;
+  }
+}
+
 body,
 html {
   background-image: url(../images/net.jpg);
@@ -114,16 +141,25 @@ body {
       background-color: rgba(0, 0, 0, 0.4);
       text-shadow: 1px 0px 1px black;
       .station {
-        height: 18rem;
+        height: 20rem;
+        @include ipad-portrait {
+          margin: 2rem;
+        }
+        @include iphone {
+          margin: 0;
+        }
         img {
           padding-top: 1em;
           width: 130px;
+          @include ipad-portrait {
+            width: 90px;
+          }
         }
-        .holder{
+        .holder {
           .select-station {
             background-color: lightslategray;
             font-size: 0.5em;
-            color:white;
+            color: white;
           }
         }
         .stats {
@@ -131,53 +167,56 @@ body {
           padding-top: 1em;
         }
       }
-      .send-data{
+      .send-data {
         height: 6rem;
         padding-top: 1.3rem;
-        button{
+        button {
           background: #778899;
-          padding: .5rem;
+          padding: 0.5rem;
           padding-left: 1.5rem;
           padding-right: 1.5rem;
           border: none;
           border-radius: 2rem;
           color: white;
         }
-        button:hover{
+        button:hover {
           color: black;
         }
       }
       .router {
         margin-bottom: 0.5em;
-        margin-top: 0.5em;        
+        margin-top: 0.5em;
         img {
           width: 110px;
+          @include ipad-portrait {
+            width: 40px;
+          }
         }
         .router-stats {
           padding-top: 1em;
         }
       }
-      .data-sender, .data-receiver{
-        p{
-          padding-top: 4.5rem ;
+      .data-sender,
+      .data-receiver {
+        p {
+          padding-top: 4.5rem;
+          @include ipad-portrait {
+            padding-top: 3rem;
+          }
         }
-        img{
+        img {
           width: 80px;
+          @include ipad {
+            width: 60px;
+          }
+          @include ipad-portrait {
+            width: 30px;
+          }
+        }
+        @include iphone {
+          display: none !important;
         }
       }
-     /* .active-stations{
-        border: 1px solid white;
-        border-radius: 2em;
-        height: 4rem;
-        margin-top: 3.5%;
-        padding: 1rem;
-        img {
-          width: 30px;
-        }
-        .transmission{
-          display: flex;
-        }
-      } */
     }
     .team-page {
       display: flex;

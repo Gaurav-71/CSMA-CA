@@ -23,7 +23,11 @@
           <div class="station col-md-2">
             <img src="images/stations/imac1.png" alt="computer" />
             <div class="mt-3 holder">
-              <select class="custom-select select-station" id="inputGroupSelect02" onchange="display(1,this.value)">
+              <select
+                class="custom-select select-station"
+                id="inputGroupSelect02"
+                onchange="display(1,this.value)"
+              >
                 <option selected>Choose Destination</option>
                 <option value="2">Station 2</option>
                 <option value="3">Station 3</option>
@@ -42,12 +46,19 @@
               <div class="sending-data">
                 Data Transfer : -
               </div>
+              <div class="ifs d-none">
+                Waiting IFS time
+              </div>
             </div>
           </div>
           <div class="station col-md-2">
             <img src="images/stations/imac2.png" alt="computer" />
             <div class="mt-3 holder">
-              <select class="custom-select select-station" id="inputGroupSelect02" onchange="display(2,this.value)">
+              <select
+                class="custom-select select-station"
+                id="inputGroupSelect02"
+                onchange="display(2,this.value)"
+              >
                 <option selected>Choose Destination</option>
                 <option value="1">Station 1</option>
                 <option value="3">Station 3</option>
@@ -66,12 +77,19 @@
               <div class="sending-data">
                 Data Transfer : -
               </div>
+              <div class="ifs d-none">
+                Waiting IFS time
+              </div>
             </div>
           </div>
           <div class="station col-md-2">
             <img src="images/stations/imac3.png" alt="computer" />
             <div class="mt-3 holder">
-              <select class="custom-select select-station" id="inputGroupSelect02" onchange="display(3,this.value)">
+              <select
+                class="custom-select select-station"
+                id="inputGroupSelect02"
+                onchange="display(3,this.value)"
+              >
                 <option selected>Choose Destination</option>
                 <option value="1">Station 1</option>
                 <option value="2">Station 2</option>
@@ -90,12 +108,19 @@
               <div class="sending-data">
                 Data Transfer : -
               </div>
+              <div class="ifs d-none">
+                Waiting IFS time
+              </div>
             </div>
           </div>
           <div class="station col-md-2">
             <img src="images/stations/imac4.png" alt="computer" />
             <div class="mt-3 holder">
-              <select class="custom-select select-station" id="inputGroupSelect02" onchange="display(4,this.value)">
+              <select
+                class="custom-select select-station"
+                id="inputGroupSelect02"
+                onchange="display(4,this.value)"
+              >
                 <option selected>Choose Destination</option>
                 <option value="1">Station 1</option>
                 <option value="2">Station 2</option>
@@ -114,12 +139,19 @@
               <div class="sending-data">
                 Data Transfer : -
               </div>
+              <div class="ifs d-none">
+                Waiting IFS time
+              </div>
             </div>
           </div>
           <div class="station col-md-2">
             <img src="images/stations/imac5.png" alt="computer" />
             <div class="mt-3 holder">
-              <select class="custom-select select-station" id="inputGroupSelect02" onchange="display(5,this.value)">
+              <select
+                class="custom-select select-station"
+                id="inputGroupSelect02"
+                onchange="display(5,this.value)"
+              >
                 <option selected>Choose Destination</option>
                 <option value="1">Station 1</option>
                 <option value="2">Station 2</option>
@@ -138,12 +170,19 @@
               <div class="sending-data">
                 Data Transfer : -
               </div>
+              <div class="ifs d-none">
+                Waiting IFS time
+              </div>
             </div>
           </div>
           <div class="station col-md-2">
             <img src="images/stations/imac6.png" alt="computer" />
             <div class="mt-3 holder">
-              <select class="custom-select select-station" id="inputGroupSelect02" onchange="display(6,this.value)">
+              <select
+                class="custom-select select-station"
+                id="inputGroupSelect02"
+                onchange="display(6,this.value)"
+              >
                 <option selected>Choose Destination</option>
                 <option value="1">Station 1</option>
                 <option value="2">Station 2</option>
@@ -162,38 +201,21 @@
               <div class="sending-data">
                 Data Transfer : -
               </div>
+              <div class="ifs d-none">
+                Waiting IFS time
+              </div>
             </div>
-          </div>  
+          </div>
           <div class="col-md-12 send-data">
-            <button>Send Data</button>
-          </div>        
-<!-- 
-
-             <div class="active-stations col-md-2">
-            <div class="transmission d-none">
-              <span class="sender pr-3 d-inline-flex">
-                <img src="images/imac.svg" alt="sender" />
-                <div id="station1"></div>
-              </span>
-              <span class="sending-animation">
-                <img src="images/loading.svg" alt="" />
-              </span>
-              <span class="receiver pl-3 d-inline-flex">
-                <div id="station2"></div>
-                <img src="images/imac.svg" alt="sender" />
-              </span>
-            </div>
-            <div class="no-transmission d-flex"> 
-              No Transmission
-            </div>
-          </div> -->
-          <div class="row col-md-5 p-0 m-0 data-sender">            
-              <p class="ml-4 mr-4">Sender x</p>
-              <img src="images/imac.svg" alt="sender" class="mr-4 mac">                                               
-              <img src="images/loading.svg" alt="sending" class="transmission">            
-              <img src="images/loading.svg" alt="sending" class="transmission">  
-              <img src="images/loading.svg" alt="sending" class="transmission">                
-          </div>          
+            <button onclick="checkChannel()">Send Data</button>
+          </div>
+          <div class="row col-md-5 p-0 m-0 for-swap data-sender d-none">
+            <p class="ml-4 mr-4" id="station1">Sender x</p>
+            <img src="images/imac.svg" alt="sender" class="mr-4 mac" />
+            <img src="images/loading.svg" alt="sending" class="transmission" />
+            <img src="images/loading.svg" alt="sending" class="transmission" />
+            <img src="images/loading.svg" alt="sending" class="transmission" />
+          </div>
           <div class="col-md-2 router">
             <img src="images/router.svg" alt="router" />
             <div class="router-stats">
@@ -202,12 +224,12 @@
               </div>
             </div>
           </div>
-          <div class="row col-md-5 p-0 m-0 data-receiver">
-            <img src="images/loading.svg" alt="sending" class="transmission">  
-            <img src="images/loading.svg" alt="sending" class="transmission">  
-            <img src="images/loading.svg" alt="sending" class="transmission">               
-            <img src="images/imac.svg" alt="sender" class="ml-4 mac">                       
-            <p class="ml-4 mr-4">Sender y</p>
+          <div class="row col-md-5 p-0 m-0 for-swap data-receiver d-none">
+            <img src="images/loading.svg" alt="sending" class="transmission" />
+            <img src="images/loading.svg" alt="sending" class="transmission" />
+            <img src="images/loading.svg" alt="sending" class="transmission" />
+            <img src="images/imac.svg" alt="sender" class="ml-4 mac" />
+            <p class="ml-4 mr-4" id="station2">Sender y</p>
           </div>
         </div>
       </div>
