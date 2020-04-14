@@ -277,6 +277,13 @@ body main .simulation-page .data-receiver img {
   }
 }
 
+@media (max-width: 1112px) {
+  body main .simulation-page .data-sender img,
+  body main .simulation-page .data-receiver img {
+    width: 60px;
+  }
+}
+
 @media (max-width: 768px) {
   body main .simulation-page .data-sender img,
   body main .simulation-page .data-receiver img {
