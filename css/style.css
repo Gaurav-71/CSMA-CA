@@ -129,6 +129,10 @@ body main .about-page .card .card-body .flowchart {
   text-align: center;
 }
 
+body main .about-page .card .card-body .flowchart img {
+  width: 100%;
+}
+
 body main .about-page .card .custom-scroll {
   overflow-y: scroll;
   height: 20em !important;
